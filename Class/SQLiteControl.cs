@@ -38,38 +38,5 @@ namespace ProjectPT_Remaster.Class
             conn.Close();
             return medicines;
         }
-        /*public void SQLiteClose(List<Medicine> gameInfos)
-        {
-            conn = new SQLiteConnection("Data Source=C:\\Users\\KRKimwoo\\source\\repos\\ProjectPT\\MediData.db;Version=3;");
-            conn.Open();
-            foreach (var gameInfo in gameInfos)
-            {
-                SQLiteCommand valuecmd = new SQLiteCommand("SELECT * FROM GameInfo WHERE GameType = '" + gameInfo.GameType + "'", conn);
-                SQLiteDataReader reader = valuecmd.ExecuteReader();
-                int count = 0;
-                while (reader.Read())
-                    count += 1;
-                if (count == 0)
-                {
-                    reader.Close();
-                    SQLiteCommand insertcmd = new SQLiteCommand("INSERT INTO GameInfo (BoardId, GameType, ThreadId, title, readCount, likeCount, userName, createTime, modifyTime) " +
-                        "values (" + gameInfo.BoardId + ", '" + gameInfo.GameType + "'," + gameInfo.ThreadId + ", '" + gameInfo.title + "', " + gameInfo.readCount + ", " + gameInfo.likeCount + ", " + gameInfo.userName + ", " + gameInfo.createTime + ", " + gameInfo.modifyTime, conn);
-                }
-                else
-                {
-                    SQLiteCommand updatecmd = new SQLiteCommand("UPDATE GameInfo SET ThreadId = " + gameInfo.ThreadId + ", title = '" + gameInfo.title + "', readCount = " + gameInfo.readCount + ", likeCount = " + gameInfo.likeCount + ", userName = '" + gameInfo.userName + "', createTime = " + gameInfo.createTime + ", modifyTime = " + gameInfo.modifyTime + " WHERE BoardId = " + gameInfo.BoardId, conn);
-                    updatecmd.ExecuteNonQuery();
-                }
-            }
-            conn.Close();
-        }*/
-
-        public void SQLiteDelete(string GameType)
-        {
-            conn = new SQLiteConnection("Data Source=C:\\Users\\KRKimwoo\\source\\repos\\UI Design\\database.db;Version=3;");
-            conn.Open();
-            SQLiteCommand deletecmd = new SQLiteCommand("DELETE FROM GameInfo WHERE GameType = " + GameType, conn);
-            deletecmd.ExecuteNonQuery();
-        }
     }
 }

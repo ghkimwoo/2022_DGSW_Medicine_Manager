@@ -29,7 +29,6 @@ namespace ProjectPT_Remaster
             menws = new List<Label>();
             menws.Add(btn_Menu1);
             menws.Add(btn_Menu2);
-            menws.Add(btn_Menu3);
 
             menw_colors = new List<Color>();
             menw_colors.Add(Color.FromArgb(53, 124, 225));
@@ -61,11 +60,7 @@ namespace ProjectPT_Remaster
         {
             setMenuChgane(1);
         }
-
-        private void btn_Menu3_Click(object sender, EventArgs e)
-        {
-            setMenuChgane(2);
-        }
+        
 
         private void Medi_Search_textBox_TextChanged(object sender, EventArgs e)
         {
@@ -176,7 +171,6 @@ namespace ProjectPT_Remaster
             this.Tab_Menu_Select_Bar = new System.Windows.Forms.Panel();
             this.btn_Menu1 = new System.Windows.Forms.Label();
             this.btn_Menu2 = new System.Windows.Forms.Label();
-            this.btn_Menu3 = new System.Windows.Forms.Label();
             this.Tab_Back.SuspendLayout();
             this.Tab_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -191,8 +185,8 @@ namespace ProjectPT_Remaster
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tab_Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.Tab_Back.Controls.Add(this.Tab_Main);
             this.Tab_Back.Controls.Add(this.Tab_Menu_Back);
+            this.Tab_Back.Controls.Add(this.Tab_Main);
             this.Tab_Back.Location = new System.Drawing.Point(0, 0);
             this.Tab_Back.Name = "Tab_Back";
             this.Tab_Back.Size = new System.Drawing.Size(798, 523);
@@ -206,7 +200,7 @@ namespace ProjectPT_Remaster
             this.Tab_Main.Controls.Add(this.tabPage1);
             this.Tab_Main.Controls.Add(this.tabPage2);
             this.Tab_Main.Controls.Add(this.tabPage3);
-            this.Tab_Main.Location = new System.Drawing.Point(-4, 40);
+            this.Tab_Main.Location = new System.Drawing.Point(0, 0);
             this.Tab_Main.Name = "Tab_Main";
             this.Tab_Main.SelectedIndex = 0;
             this.Tab_Main.Size = new System.Drawing.Size(806, 509);
@@ -359,7 +353,6 @@ namespace ProjectPT_Remaster
             this.Tab_Menu_Back.Controls.Add(this.Tab_Menu_Select_Back);
             this.Tab_Menu_Back.Controls.Add(this.btn_Menu1);
             this.Tab_Menu_Back.Controls.Add(this.btn_Menu2);
-            this.Tab_Menu_Back.Controls.Add(this.btn_Menu3);
             this.Tab_Menu_Back.Location = new System.Drawing.Point(0, 0);
             this.Tab_Menu_Back.Name = "Tab_Menu_Back";
             this.Tab_Menu_Back.Size = new System.Drawing.Size(798, 40);
@@ -392,7 +385,7 @@ namespace ProjectPT_Remaster
             this.btn_Menu1.Name = "btn_Menu1";
             this.btn_Menu1.Size = new System.Drawing.Size(150, 40);
             this.btn_Menu1.TabIndex = 1;
-            this.btn_Menu1.Text = "label1";
+            this.btn_Menu1.Text = "Timer";
             this.btn_Menu1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Menu1.Click += new System.EventHandler(this.btn_Menu1_Click);
             // 
@@ -404,21 +397,9 @@ namespace ProjectPT_Remaster
             this.btn_Menu2.Name = "btn_Menu2";
             this.btn_Menu2.Size = new System.Drawing.Size(150, 40);
             this.btn_Menu2.TabIndex = 2;
-            this.btn_Menu2.Text = "sss";
+            this.btn_Menu2.Text = "Medicine INFO";
             this.btn_Menu2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Menu2.Click += new System.EventHandler(this.btn_Menu2_Click);
-            // 
-            // btn_Menu3
-            // 
-            this.btn_Menu3.Font = new System.Drawing.Font("넥슨Lv1고딕 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Menu3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            this.btn_Menu3.Location = new System.Drawing.Point(300, 0);
-            this.btn_Menu3.Name = "btn_Menu3";
-            this.btn_Menu3.Size = new System.Drawing.Size(150, 40);
-            this.btn_Menu3.TabIndex = 3;
-            this.btn_Menu3.Text = "sss";
-            this.btn_Menu3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Menu3.Click += new System.EventHandler(this.btn_Menu3_Click);
             // 
             // Form1
             // 
@@ -453,7 +434,6 @@ namespace ProjectPT_Remaster
         private System.Windows.Forms.Panel Tab_Menu_Select_Bar;
         private System.Windows.Forms.Label btn_Menu1;
         private System.Windows.Forms.Label btn_Menu2;
-        private System.Windows.Forms.Label btn_Menu3;
         private TextBox Medi_Search_textBox;
         private Label label1;
         private Button Alarm_Enable_button;
